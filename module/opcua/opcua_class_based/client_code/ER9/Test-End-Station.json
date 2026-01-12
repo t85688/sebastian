@@ -1,0 +1,18 @@
+{
+  "ModelName": "Test-End-Station",
+  "Vendor": "Test",
+  "DeviceType": "EndStation",
+  "Interfaces": [
+    {
+      "InterfaceId": 1,
+      "InterfaceName": "eth1",
+      "CableTypes": [
+        "Copper"
+      ],
+      "SupportSpeeds": [
+        100,
+        1000
+      ]
+    }
+  ]
+}

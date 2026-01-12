@@ -1,0 +1,829 @@
+{
+  "ModelName": "TSN-G5004",
+  "DeviceName": "moxa",
+  "FirmwareVersion": "v2.2.2 Build 2024_0522_2028",
+  "Vendor": "MOXA",
+  "DeviceType": "TSNSwitch",
+  "GCLOffsetMinDuration": 680,
+  "GCLOffsetMaxDuration": 999999999,
+  "MaxVlanCfgSize": 256,
+  "PerQueueSize": 8000,
+  "PtpQueueId": 6,
+  "GateControlListLength": 1024,
+  "VlanHybridCapable": true,
+  "TEMSTIDCapable": false,
+  "PerStreamPriorityCapable": true,
+  "NumberOfQueue": 8,
+  "TickGranularity": 8,
+  "StreamPriorityConfigIngressIndexMax": 10,
+  "ProcessingDelayMap": {
+    "100": {
+      "DependentDelayRatio": 80,
+      "IndependentDelay": 15000
+    },
+    "1000": {
+      "DependentDelayRatio": 8,
+      "IndependentDelay": 5000
+    },
+    "10": {
+      "IndependentDelay": 45000,
+      "DependentDelayRatio": 800
+    }
+  },
+  "Ieee802Dot1cb": {
+    "SequenceGeneration": {
+      "Min": 0,
+      "Max": 1023
+    },
+    "SequenceRecovery": {
+      "Min": 0,
+      "Max": 1535,
+      "MinHistoryLength": 2,
+      "MaxHistoryLength": 15,
+      "ResetTimeout": 4096
+    },
+    "SequenceIdentification": {
+      "Min": 0,
+      "Max": 1023
+    },
+    "StreamIdentity": {
+      "Min": 0,
+      "Max": 1023,
+      "MinHandle": 0,
+      "MaxHandle": 2147483647
+    }
+  },
+  "Interfaces": [
+    {
+      "CableTypes": [
+        "Copper"
+      ],
+      "InterfaceId": 1,
+      "InterfaceName": "1",
+      "SupportSpeeds": [
+        10,
+        100,
+        1000
+      ]
+    },
+    {
+      "CableTypes": [
+        "Copper"
+      ],
+      "InterfaceId": 2,
+      "InterfaceName": "2",
+      "SupportSpeeds": [
+        10,
+        100,
+        1000
+      ]
+    },
+    {
+      "CableTypes": [
+        "Copper"
+      ],
+      "InterfaceId": 3,
+      "InterfaceName": "3",
+      "SupportSpeeds": [
+        10,
+        100,
+        1000
+      ]
+    },
+    {
+      "CableTypes": [
+        "Copper"
+      ],
+      "InterfaceId": 4,
+      "InterfaceName": "4",
+      "SupportSpeeds": [
+        10,
+        100,
+        1000
+      ]
+    }
+  ],
+  "FeaturesCapability": [
+    {
+      "Actions": [
+        {
+          "Action": "SNMP",
+          "Method": {
+            "Items": [
+              {
+                "Item": "SysObjectID",
+                "Path": "1.3.6.1.2.1.1.2"
+              }
+            ],
+            "Key": "RFC1213-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "RESTful",
+          "Method": {
+            "Items": [],
+            "Key": "MoxaIEI-RESTful",
+            "Protocol": "RESTful"
+          }
+        },
+        {
+          "Action": "NETCONF",
+          "Method": {
+            "Items": [],
+            "Key": "Capabilities",
+            "Protocol": "NETCONF"
+          }
+        },
+        {
+          "Action": "EnableSnmpService",
+          "Method": {
+            "Items": [],
+            "Key": "MoxaIEI-RESTful",
+            "Protocol": "RESTful"
+          }
+        }
+      ],
+      "Active": true,
+      "Feature": "CheckConnection"
+    },
+    {
+      "Actions": [
+        {
+          "Action": "GetModelName",
+          "Method": {
+            "Items": [
+              {
+                "Item": "LldpLocSysDesc",
+                "Path": "1.0.8802.1.1.2.1.3.4"
+              }
+            ],
+            "Key": "LLDP-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "GetFirmwareVersion",
+          "Method": {
+            "Items": [
+              {
+                "Item": "SiStatProductInfoFirmwareVersion",
+                "Path": "1.3.6.1.4.1.8691.602.1.1.2.2.1"
+              }
+            ],
+            "Key": "MOXA-SYSTEM-INFO-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "GetVendorID",
+          "Method": {
+            "Items": [
+              {
+                "Item": "SysObjectID",
+                "Path": "1.3.6.1.2.1.1.2"
+              }
+            ],
+            "Key": "RFC1213-MIB",
+            "Protocol": "SNMP"
+          }
+        }
+      ],
+      "Active": true,
+      "Feature": "IdentifyDevice"
+    },
+    {
+      "Actions": [
+        {
+          "Action": "GetDeviceName",
+          "Method": {
+            "Items": [
+              {
+                "Item": "SysName",
+                "Path": "1.3.6.1.2.1.1.5"
+              }
+            ],
+            "Key": "RFC1213-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "GetVendorID",
+          "Method": {
+            "Items": [
+              {
+                "Item": "SysObjectID",
+                "Path": "1.3.6.1.2.1.1.2"
+              }
+            ],
+            "Key": "RFC1213-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "GetInterfaceName",
+          "Method": {
+            "Items": [
+              {
+                "Item": "LldpLocPortId",
+                "Path": "1.0.8802.1.1.2.1.3.7.1.3"
+              }
+            ],
+            "Key": "RFC1213-MIB",
+            "Protocol": "SNMP"
+          }
+        }
+      ],
+      "Active": true,
+      "Feature": "DeviceProfileInfos"
+    },
+    {
+      "Actions": [
+        {
+          "Action": "ScanLinksByLLDP",
+          "Method": {
+            "Items": [
+              {
+                "Item": "LldpRemChassisId",
+                "Path": "1.0.8802.1.1.2.1.4.1.1.5"
+              },
+              {
+                "Item": "LldpRemPortIdSubtype",
+                "Path": "1.0.8802.1.1.2.1.4.1.1.6"
+              },
+              {
+                "Item": "LldpRemPortId",
+                "Path": "1.0.8802.1.1.2.1.4.1.1.7"
+              }
+            ],
+            "Key": "LLDP-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "GetModelName",
+          "Method": {
+            "Items": [
+              {
+                "Item": "LldpLocSysDesc",
+                "Path": "1.0.8802.1.1.2.1.3.4"
+              }
+            ],
+            "Key": "LLDP-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "GetFirmwareVersion",
+          "Method": {
+            "Items": [
+              {
+                "Item": "SiStatProductInfoFirmwareVersion",
+                "Path": "1.3.6.1.4.1.8691.602.1.1.2.2.1"
+              }
+            ],
+            "Key": "MOXA-SYSTEM-INFO-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "GetNetconfCapability",
+          "Method": {
+            "Items": [],
+            "Key": "Capabilities",
+            "Protocol": "NETCONF"
+          }
+        },
+        {
+          "Action": "GetPortSpeed",
+          "Method": {
+            "Items": [
+              {
+                "Item": "IfHighSpeed",
+                "Path": "1.3.6.1.2.1.31.1.1.1.15"
+              }
+            ],
+            "Key": "IF-MIB",
+            "Protocol": "SNMP"
+          }
+        }
+      ],
+      "Active": true,
+      "Feature": "Compare"
+    },
+    {
+      "Actions": [
+        {
+          "Action": "SetNetworkSetting",
+          "Method": {
+            "Items": [],
+            "Key": "MoxaIEI-MoxaCommand",
+            "Protocol": "MOXAcommand"
+          }
+        },
+        {
+          "Action": "Reboot",
+          "Method": {
+            "Items": [],
+            "Key": "MoxaIEI-RESTful",
+            "Protocol": "RESTful"
+          }
+        },
+        {
+          "Action": "FactoryDefault",
+          "Method": {
+            "Items": [],
+            "Key": "MoxaIEI-RESTful",
+            "Protocol": "RESTful"
+          }
+        },
+        {
+          "Action": "FirmwareUpgrade",
+          "Method": {
+            "Items": [],
+            "Key": "MoxaIEI-MoxaCommand",
+            "Protocol": "MOXAcommand"
+          }
+        },
+        {
+          "Action": "GetDeviceLinksByLldpRemoteMac",
+          "Method": {
+            "Items": [
+              {
+                "Item": "LldpRemChassisId",
+                "Path": "1.0.8802.1.1.2.1.4.1.1.5"
+              }
+            ],
+            "Key": "LLDP-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "SetGCL",
+          "Method": {
+            "Items": [
+              {
+                "Item": "Ieee802dot1qsched20180910",
+                "Path": ""
+              }
+            ],
+            "Key": "IEEE802dot1qsched",
+            "Protocol": "NETCONF"
+          }
+        },
+        {
+          "Action": "GetStaticUnicast",
+          "Method": {
+            "Items": [
+              {
+                "Item": "Dot1qStaticUnicastAllowedToGoTo",
+                "Path": "1.3.6.1.2.1.17.7.1.3.1.1.3"
+              },
+              {
+                "Item": "Dot1qStaticUnicastStatus",
+                "Path": "1.3.6.1.2.1.17.7.1.3.1.1.4"
+              }
+            ],
+            "Key": "Q-BRIDGE-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "SetStaticUnicast",
+          "Method": {
+            "Items": [
+              {
+                "Item": "Dot1qStaticUnicastAllowedToGoTo",
+                "Path": "1.3.6.1.2.1.17.7.1.3.1.1.3"
+              },
+              {
+                "Item": "Dot1qStaticUnicastStatus",
+                "Path": "1.3.6.1.2.1.17.7.1.3.1.1.4"
+              }
+            ],
+            "Key": "Q-BRIDGE-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "GetStaticMulticast",
+          "Method": {
+            "Items": [
+              {
+                "Item": "Dot1qStaticMulticastStaticEgressPorts",
+                "Path": "1.3.6.1.2.1.17.7.1.3.2.1.3"
+              },
+              {
+                "Item": "Dot1qStaticMulticastStatus",
+                "Path": "1.3.6.1.2.1.17.7.1.3.2.1.5"
+              }
+            ],
+            "Key": "Q-BRIDGE-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "SetStaticMulticast",
+          "Method": {
+            "Items": [
+              {
+                "Item": "Dot1qStaticMulticastStaticEgressPorts",
+                "Path": "1.3.6.1.2.1.17.7.1.3.2.1.3"
+              },
+              {
+                "Item": "Dot1qStaticMulticastStatus",
+                "Path": "1.3.6.1.2.1.17.7.1.3.2.1.5"
+              }
+            ],
+            "Key": "Q-BRIDGE-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "GetVLAN",
+          "Method": {
+            "Items": [
+              {
+                "Item": "Dot1qVlanStaticName",
+                "Path": "1.3.6.1.2.1.17.7.1.4.3.1.1"
+              },
+              {
+                "Item": "Dot1qVlanStaticEgressPorts",
+                "Path": "1.3.6.1.2.1.17.7.1.4.3.1.2"
+              },
+              {
+                "Item": "Dot1qVlanStaticUntaggedPorts",
+                "Path": "1.3.6.1.2.1.17.7.1.4.3.1.4"
+              },
+              {
+                "Item": "Dot1qVlanStaticRowStatus",
+                "Path": "1.3.6.1.2.1.17.7.1.4.3.1.5"
+              }
+            ],
+            "Key": "Q-BRIDGE-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "SetVLAN",
+          "Method": {
+            "Items": [
+              {
+                "Item": "Dot1qVlanStaticName",
+                "Path": "1.3.6.1.2.1.17.7.1.4.3.1.1"
+              },
+              {
+                "Item": "Dot1qVlanStaticEgressPorts",
+                "Path": "1.3.6.1.2.1.17.7.1.4.3.1.2"
+              },
+              {
+                "Item": "Dot1qVlanStaticUntaggedPorts",
+                "Path": "1.3.6.1.2.1.17.7.1.4.3.1.4"
+              },
+              {
+                "Item": "Dot1qVlanStaticRowStatus",
+                "Path": "1.3.6.1.2.1.17.7.1.4.3.1.5"
+              }
+            ],
+            "Key": "Q-BRIDGE-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "GetStreamPriorityIngress",
+          "Method": {
+            "Items": [
+              {
+                "Item": "StadConfigIndexEnable",
+                "Path": "1.3.6.1.4.1.8691.603.2.10.1.2.1.3"
+              },
+              {
+                "Item": "StadConfigEthertypeValue",
+                "Path": "1.3.6.1.4.1.8691.603.2.10.1.2.1.4"
+              },
+              {
+                "Item": "StadConfigSubtypeEnable",
+                "Path": "1.3.6.1.4.1.8691.603.2.10.1.2.1.5"
+              },
+              {
+                "Item": "StadConfigSubtypeValue",
+                "Path": "1.3.6.1.4.1.8691.603.2.10.1.2.1.6"
+              },
+              {
+                "Item": "StadConfigVlanId",
+                "Path": "1.3.6.1.4.1.8691.603.2.10.1.2.1.7"
+              },
+              {
+                "Item": "StadConfigVlanPCP",
+                "Path": "1.3.6.1.4.1.8691.603.2.10.1.2.1.8"
+              }
+            ],
+            "Key": "MOXA-STREAM-ADAPTER-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "SetStreamPriorityIngress",
+          "Method": {
+            "Items": [
+              {
+                "Item": "StadConfigIndexEnable",
+                "Path": "1.3.6.1.4.1.8691.603.2.10.1.2.1.3"
+              },
+              {
+                "Item": "StadConfigEthertypeValue",
+                "Path": "1.3.6.1.4.1.8691.603.2.10.1.2.1.4"
+              },
+              {
+                "Item": "StadConfigSubtypeEnable",
+                "Path": "1.3.6.1.4.1.8691.603.2.10.1.2.1.5"
+              },
+              {
+                "Item": "StadConfigSubtypeValue",
+                "Path": "1.3.6.1.4.1.8691.603.2.10.1.2.1.6"
+              },
+              {
+                "Item": "StadConfigVlanId",
+                "Path": "1.3.6.1.4.1.8691.603.2.10.1.2.1.7"
+              },
+              {
+                "Item": "StadConfigVlanPCP",
+                "Path": "1.3.6.1.4.1.8691.603.2.10.1.2.1.8"
+              }
+            ],
+            "Key": "MOXA-STREAM-ADAPTER-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "SetStreamPriorityEgress",
+          "Method": {
+            "Items": [
+              {
+                "Item": "StadConfigEgressUntag",
+                "Path": "1.3.6.1.4.1.8691.603.2.10.1.1.1.2"
+              }
+            ],
+            "Key": "MOXA-STREAM-ADAPTER-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "GetVlanPortType",
+          "Method": {
+            "Items": [
+              {
+                "Item": "VlanConfigVlanPortType",
+                "Path": "1.3.6.1.4.1.8691.603.2.3.1.4.1.2"
+              }
+            ],
+            "Key": "MOXA-VLAN-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "SetVlanPortType",
+          "Method": {
+            "Items": [
+              {
+                "Item": "VlanConfigVlanPortType",
+                "Path": "1.3.6.1.4.1.8691.603.2.3.1.4.1.2"
+              }
+            ],
+            "Key": "MOXA-VLAN-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "GetPortPVID",
+          "Method": {
+            "Items": [
+              {
+                "Item": "Dot1qPvid",
+                "Path": "1.3.6.1.2.1.17.7.1.4.5.1.1"
+              }
+            ],
+            "Key": "Q-BRIDGE-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "SetPortPVID",
+          "Method": {
+            "Items": [
+              {
+                "Item": "Dot1qPvid",
+                "Path": "1.3.6.1.2.1.17.7.1.4.5.1.1"
+              }
+            ],
+            "Key": "Q-BRIDGE-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "SetPortDefaultPCP",
+          "Method": {
+            "Items": [
+              {
+                "Item": "QosConfigDefaultPriorityValue",
+                "Path": "1.3.6.1.4.1.8691.603.2.9.1.3.1.2"
+              }
+            ],
+            "Key": "MOXA-QOS-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "SetSpanningTree",
+          "Method": {
+            "Items": [
+              {
+                "Item": "RstpConfigEnable",
+                "Path": "1.3.6.1.4.1.8691.603.3.2.1.1"
+              },
+              {
+                "Item": "Ieee8021SpanningTreeVersion",
+                "Path": "1.3.111.2.802.1.1.3.1.1.1.16"
+              },
+              {
+                "Item": "Ieee8021SpanningTreeBridgeHelloTime",
+                "Path": "1.3.111.2.802.1.1.3.1.1.1.14"
+              },
+              {
+                "Item": "Ieee8021SpanningTreePriority",
+                "Path": "1.3.111.2.802.1.1.3.1.1.1.3"
+              }
+            ],
+            "Key": "MOXA-RSTP-NO-ROOTGUARD-CONFIG",
+            "Protocol": "SNMP"
+          }
+        }
+      ],
+      "Active": true,
+      "Feature": "Deploy"
+    },
+    {
+      "Actions": [
+        {
+          "Action": "ScanLinksByLLDP",
+          "Method": {
+            "Items": [
+              {
+                "Item": "LldpRemChassisId",
+                "Path": "1.0.8802.1.1.2.1.4.1.1.5"
+              },
+              {
+                "Item": "LldpRemPortIdSubtype",
+                "Path": "1.0.8802.1.1.2.1.4.1.1.6"
+              },
+              {
+                "Item": "LldpRemPortId",
+                "Path": "1.0.8802.1.1.2.1.4.1.1.7"
+              }
+            ],
+            "Key": "LLDP-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "ScanLinksByMacTable",
+          "Method": {
+            "Items": [
+              {
+                "Item": "Dot1qTpFdbPort",
+                "Path": "1.3.6.1.2.1.17.7.1.2.2.1.2"
+              }
+            ],
+            "Key": "Q-BRIDGE-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "GetInterfaceMacAddress",
+          "Method": {
+            "Items": [
+              {
+                "Item": "IfPhysAddress",
+                "Path": "1.3.6.1.2.1.2.2.1.6"
+              }
+            ],
+            "Key": "RFC1213-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "GetPortSpeed",
+          "Method": {
+            "Items": [
+              {
+                "Item": "IfHighSpeed",
+                "Path": "1.3.6.1.2.1.31.1.1.1.15"
+              }
+            ],
+            "Key": "IF-MIB",
+            "Protocol": "SNMP"
+          }
+        }
+      ],
+      "Active": true,
+      "Feature": "AutoScan"
+    },
+    {
+      "Actions": [
+        {
+          "Action": "GetPortSpeed",
+          "Method": {
+            "Items": [
+              {
+                "Item": "IfHighSpeed",
+                "Path": "1.3.6.1.2.1.31.1.1.1.15"
+              }
+            ],
+            "Key": "IF-MIB",
+            "Protocol": "SNMP"
+          }
+        },
+        {
+          "Action": "GetByteCount",
+          "Method": {
+            "Items": [
+              {
+                "Item": "IfOutOctets",
+                "Path": "1.3.6.1.2.1.2.2.1.16"
+              }
+            ],
+            "Key": "RFC1213-MIB",
+            "Protocol": "SNMP"
+          }
+        }
+      ],
+      "Active": true,
+      "Feature": "Monitor"
+    },
+    {
+      "Actions": [
+        {
+          "Action": "SetNetworkSetting",
+          "Method": {
+            "Items": [],
+            "Key": "MoxaIEI-MoxaCommand",
+            "Protocol": "MOXAcommand"
+          }
+        },
+        {
+          "Action": "Reboot",
+          "Method": {
+            "Items": [],
+            "Key": "MoxaIEI-RESTful",
+            "Protocol": "RESTful"
+          }
+        },
+        {
+          "Action": "FactoryDefault",
+          "Method": {
+            "Items": [],
+            "Key": "MoxaIEI-RESTful",
+            "Protocol": "RESTful"
+          }
+        },
+        {
+          "Action": "FirmwareUpgrade",
+          "Method": {
+            "Items": [],
+            "Key": "MoxaIEI-MoxaCommand",
+            "Protocol": "MOXAcommand"
+          }
+        },
+        {
+          "Action": "EnableSnmpService",
+          "Method": {
+            "Items": [],
+            "Key": "MoxaIEI-RESTful",
+            "Protocol": "RESTful"
+          }
+        }
+      ],
+      "Active": true,
+      "Feature": "DeviceConfiguration"
+    },
+    {
+      "Actions": [
+        {
+          "Action": "GetInterfaceMacAddress",
+          "Method": {
+            "Items": [
+              {
+                "Item": "IfPhysAddress",
+                "Path": "1.3.6.1.2.1.2.2.1.6"
+              }
+            ],
+            "Key": "RFC1213-MIB",
+            "Protocol": "SNMP"
+          }
+        }
+      ],
+      "Active": true,
+      "Feature": "Sync"
+    }
+  ]
+}

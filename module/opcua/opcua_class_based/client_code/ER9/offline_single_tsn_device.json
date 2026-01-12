@@ -1,0 +1,167 @@
+{
+  "ImportDeviceProfiles": [
+    {
+      "NodeName": "Test-End-Station_",
+      "Filename": "Test-End-Station.json"
+    },
+    {
+      "NodeName": "TSN-G5004_v2.2.2 Build 2024_0522_2028",
+      "Filename": "TSN-G5004_v2.2.2 Build 2024_0522_2028.json"
+    }
+  ],
+  "BuiltinDeviceProfiles": [
+    {
+      "NodeName": "TSN-G5004_v2.2 Build 2022_0720_1430"
+    }
+  ],
+  "TsnProjectSetting": {
+    "TsnProjectName": "new project",
+    "KeepPreviousResult": false,
+    "MinTsnVlan": 2,
+    "MaxTsnVlan": 2048,
+    "TsnProjectPcpSetting": {
+      "Queue0": 1,
+      "Queue1": 1,
+      "Queue2": 3,
+      "Queue3": 3,
+      "Queue4": 3,
+      "Queue5": 3,
+      "Queue6": 2,
+      "Queue7": 3
+    },
+    "NETCONF": {
+      "Username": "",
+      "Password": "",
+      "SSHPort": 0
+    },
+    "SNMP": {
+      "ReadCommunity": "",
+      "WriteCommunity": "",
+      "Port": 0,
+      "Version": 1
+    },
+    "RESTful": {
+      "Username": "admin",
+      "Password": "moxa",
+      "Port": 80
+    }
+  },
+  "TimeSlots": [
+    {
+      "TimeSlotIndex": 0,
+      "TimeSlotPeriod": 1250000,
+      "TimeSlotTrafficType": 1
+    },
+    {
+      "TimeSlotIndex": 1,
+      "TimeSlotPeriod": 5000000,
+      "TimeSlotTrafficType": 3
+    },
+    {
+      "TimeSlotIndex": 2,
+      "TimeSlotPeriod": 1250000,
+      "TimeSlotTrafficType": 2
+    }
+  ],
+  "TsnStreams": [
+    {
+      "StreamName": "Stream 1 - StreamPriority",
+      "TimeSlotIndex": 1,
+      "CCLinkIEStream": {
+        "EtherType": 35087,
+        "SubType": 16
+      },
+      "DestinationAddress": "01-00-5E-00-00-10",
+      "TalkerInterface": {
+        "IpAddress": "192.168.127.100",
+        "InterfaceName": "eth1"
+      },
+      "ListenerInterface": [
+        {
+          "IpAddress": "192.168.127.200",
+          "InterfaceName": "eth1"
+        },
+        {
+          "IpAddress": "192.168.127.201",
+          "InterfaceName": "eth1"
+        }
+      ]
+    }
+  ],
+  "TsnBridges": [
+    {
+      "IpAddress": "192.168.127.2",
+      "DeviceProfileName": "TSN-G5004_v2.2.2 Build 2024_0522_2028",
+      "NETCONF": {
+        "Username": "admin",
+        "Password": "moxa",
+        "SSHPort": 830
+      },
+      "SNMP": {
+        "ReadCommunity": "public",
+        "WriteCommunity": "private",
+        "Port": 161,
+        "Version": 1
+      },
+      "RESTful": {
+        "Username": "admin",
+        "Password": "moxa",
+        "Port": 80
+      }
+    }
+  ],
+  "TsnBridgedEndStations": [],
+  "TsnEndStations": [
+    {
+      "IpAddress": "192.168.127.100",
+      "DeviceProfileName": "End-Station_",
+      "TsnEthernetInterfaces": [
+        {
+          "PhysAddress": "00-00-00-00-00-AA",
+          "InterfaceName": "eth1"
+        }
+      ]
+    },
+    {
+      "IpAddress": "192.168.127.200",
+      "DeviceProfileName": "End-Station_",
+      "TsnEthernetInterfaces": [
+        {
+          "PhysAddress": "00-00-00-00-00-BB",
+          "InterfaceName": "eth1"
+        }
+      ]
+    },
+    {
+      "IpAddress": "192.168.127.201",
+      "DeviceProfileName": "End-Station_",
+      "TsnEthernetInterfaces": [
+        {
+          "PhysAddress": "00-00-00-00-00-CC",
+          "InterfaceName": "eth1"
+        }
+      ]
+    }
+  ],
+  "TsnLinks": [
+    {
+      "SourceIpAddress": "192.168.127.100",
+      "SourceInterfaceName": "eth1",
+      "DestinationIpAddress": "192.168.127.2",
+      "DestinationInterfaceName": "1"
+    },
+    {
+      "SourceIpAddress": "192.168.127.200",
+      "SourceInterfaceName": "eth1",
+      "DestinationIpAddress": "192.168.127.2",
+      "DestinationInterfaceName": "2"
+    },
+    {
+      "SourceIpAddress": "192.168.127.201",
+      "SourceInterfaceName": "eth1",
+      "DestinationIpAddress": "192.168.127.2",
+      "DestinationInterfaceName": "3"
+    }
+  ],
+  "ComputedResult": []
+}

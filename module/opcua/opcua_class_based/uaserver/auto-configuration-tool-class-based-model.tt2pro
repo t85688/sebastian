@@ -1,0 +1,31 @@
+###########################
+# UaModeler Project File  #
+# Generated at 28.08.2025 #
+###########################
+
+PROJECTNAME = auto-configuration-tool-class-based-model
+
+TEMPLATESET = ($TEMPLATES)/cpp/v1_8/t4/cpp_server.tt2set
+
+MODELS += ($MODELS)/Opc.Ua.NodeSet2.ua \
+    Opc.Ua.BNM.NodeSet2.ua \
+    auto-configuration-tool-class-based-model.ua
+
+VARIABLES+= Opc.Ua.BNM.NodeSet2.ua: CreateStringNodeIds=false; DllExportPrefix=OpcUaClassBnm; NamespaceName=OpcUaClassBnmNS; NamespacePrefix=OpcUaClassBnm; \
+    auto-configuration-tool-class-based-model.ua: CreateStringNodeIds=false; DllExportPrefix=MoxaClassBased; NamespaceName=MoxaClassBasedNS; NamespacePrefix=MoxaClassBased; 
+
+COLORS = ($MODELS)/Opc.Ua.NodeSet2.ua: #0000ff\
+    Opc.Ua.BNM.NodeSet2.ua: #0000ff\
+    auto-configuration-tool-class-based-model.ua: #0000ff
+
+OUTPUTPATH = generated_code
+
+GENERATE += Opc.Ua.BNM.NodeSet2.ua \
+    auto-configuration-tool-class-based-model.ua
+
+NODEACCESSINFOROLES += Administrator \
+    SecurityAdmin \
+    ConfigurationAdmin \
+    Operator \
+    Observer
+

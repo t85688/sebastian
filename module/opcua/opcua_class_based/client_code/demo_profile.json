@@ -1,0 +1,119 @@
+{
+  "Id": 10,
+  "IconName": "TSN-G5004.png",
+  "DataVersion": "2",
+  "ModelName": "TSN-G5005",
+  "MountType": [
+    "DinRail",
+    "WallMount"
+  ],
+  "BuiltInPower": true,
+  "SupportPowerModules": {
+    "1": "PWR-TSN"
+  },
+  "DeviceName": "moxa",
+  "BuiltIn": false,
+  "Hide": false,
+  "Certificate": false,
+  "Vendor": "MOXA",
+  "DeviceType": "TSNSwitch",
+  "GCLOffsetMinDuration": 680,
+  "GCLOffsetMaxDuration": 999999999,
+  "MaxVlanCfgSize": 256,
+  "PerQueueSize": 8000,
+  "PtpQueueId": 6,
+  "VlanHybridCapable": true,
+  "TEMSTIDCapable": false,
+  "PerStreamPriorityCapable": true,
+  "GateControlListLength": 1024,
+  "NumberOfQueue": 8,
+  "TickGranularity": 8,
+  "StreamPriorityConfigIngressIndexMax": 10,
+  "ProcessingDelayMap": {
+    "1000": {
+      "IndependentDelay": 5000,
+      "DependentDelayRatio": 8
+    },
+    "100": {
+      "IndependentDelay": 15000,
+      "DependentDelayRatio": 80
+    },
+    "10": {
+      "IndependentDelay": 45000,
+      "DependentDelayRatio": 800
+    }
+  },
+  "Ieee802Dot1cb": {
+    "SequenceGeneration": {
+      "Min": 0,
+      "Max": 1023
+    },
+    "SequenceRecovery": {
+      "Min": 0,
+      "Max": 1535,
+      "MinHistoryLength": 2,
+      "MaxHistoryLength": 15,
+      "ResetTimeout": 4096
+    },
+    "SequenceIdentification": {
+      "Min": 0,
+      "Max": 1023
+    },
+    "StreamIdentity": {
+      "Min": 0,
+      "Max": 1023,
+      "MinHandle": 0,
+      "MaxHandle": 2147483647
+    }
+  },
+  "Interfaces": [
+    {
+      "InterfaceId": 1,
+      "InterfaceName": "1",
+      "CableTypes": [
+        "Copper"
+      ],
+      "SupportSpeeds": [
+        10,
+        100,
+        1000
+      ]
+    },
+    {
+      "InterfaceId": 2,
+      "InterfaceName": "2",
+      "CableTypes": [
+        "Copper"
+      ],
+      "SupportSpeeds": [
+        10,
+        100,
+        1000
+      ]
+    },
+    {
+      "InterfaceId": 3,
+      "InterfaceName": "3",
+      "CableTypes": [
+        "Copper"
+      ],
+      "SupportSpeeds": [
+        10,
+        100,
+        1000
+      ]
+    },
+    {
+      "InterfaceId": 4,
+      "InterfaceName": "4",
+      "CableTypes": [
+        "Copper"
+      ],
+      "SupportSpeeds": [
+        10,
+        100,
+        1000
+      ]
+    }
+  ]
+}

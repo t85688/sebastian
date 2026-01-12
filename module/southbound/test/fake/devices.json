@@ -1,0 +1,56 @@
+{
+  "Id": 192168127253,
+  "DeviceName": "",
+  "DeviceType": "TSNSwitch",
+  "Interfaces": [],
+  "Angle": 0,
+  "Coordinate": {
+    "X": 0,
+    "Y": 0
+  },
+  "DeviceProperty": {
+    "DeviceProfileId": 0,
+    "GCLOffsetMaxDuration": 0,
+    "GCLOffsetMinDuration": 680,
+    "GateControlListLength": 1024,
+    "MaxVlanCfgSize": 256,
+    "ModelName": "TSN-G5004",
+    "FirmwareVersion": "v2.2",
+    "NumberOfQueue": 8,
+    "PerQueueSize": 8000,
+    "PtpQueueId": 6,
+    "StreamPriorityConfigIngressIndexMax": 10,
+    "TickGranularity": 8
+  },
+  "Ipv4": {
+    "Gateway": "",
+    "IpAddress": "192.168.127.253",
+    "SubnetMask": ""
+  },
+  "NetconfConfiguration": {
+    "NetconfOverSSH": {
+      "Account": "admin",
+      "Password": "moxa",
+      "SSHPort": 830
+    },
+    "NetconfOverTLS": {
+      "CaCerts": "",
+      "CertFile": "",
+      "KeyFile": "",
+      "TLSPort": 6513
+    },
+    "TLS": false
+  },
+  "SnmpConfiguration": {
+    "Port": 161,
+    "ReadCommunity": "public",
+    "Version": "v2c",
+    "WriteCommunity": "private"
+  },
+  "RestfulConfiguration": {
+    "Port": 80,
+    "Username": "admin",
+    "Password": "moxa"
+  },
+  "Zone": 47211
+}

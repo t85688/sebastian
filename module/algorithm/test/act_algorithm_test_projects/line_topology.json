@@ -1,0 +1,793 @@
+{
+    "ActVersion": "2.0",
+    "AlgorithmConfiguration": {
+        "KeepPreviousResult": true,
+        "MediaSpecificOverheadBytes": 43,
+        "QbvAfterCbMerge": false,
+        "Stage": 0,
+        "TickGranularity": 10,
+        "TimeSyncDelay": 200,
+        "Timeout": 9999
+    },
+    "CreatedTime": 1649814735,
+    "CycleSetting": {
+        "AdminBaseTime": {
+            "FractionalSeconds": 0,
+            "Second": 0
+        },
+        "AdminCycleTime": {
+            "Denominator": 1000000000,
+            "Numerator": 1000000
+        },
+        "CycleName": "Simple Cycle",
+        "TimeSlots": [
+            {
+                "Index": 0,
+                "Period": 800000,
+                "TrafficType": "BestEffort"
+            },
+            {
+                "Index": 1,
+                "Period": 160000,
+                "TrafficType": "Cyclic"
+            },
+            {
+                "Index": 2,
+                "Period": 40000,
+                "TrafficType": "TimeSync"
+            },
+            {
+                "Index": 3,
+                "Period": 0,
+                "TrafficType": "NA"
+            },
+            {
+                "Index": 4,
+                "Period": 0,
+                "TrafficType": "NA"
+            },
+            {
+                "Index": 5,
+                "Period": 0,
+                "TrafficType": "NA"
+            },
+            {
+                "Index": 6,
+                "Period": 0,
+                "TrafficType": "NA"
+            },
+            {
+                "Index": 7,
+                "Period": 0,
+                "TrafficType": "NA"
+            }
+        ]
+    },
+    "DataVersion": 2,
+    "Devices": [
+        {
+            "Angle": 0,
+            "Coordinate": {
+                "X": 0,
+                "Y": 0
+            },
+            "DeviceName": "End Station 1",
+            "DeviceProperty": {
+                "DeviceProfileId": 1,
+                "GCLOffsetMaxDuration": 1000000,
+                "GCLOffsetMinDuration": 680,
+                "GateControlListLength": 1024,
+                "MaxVlanCfgSize": 256,
+                "ModelName": "EndStation",
+                "FirmwareVersion": "v2.2",
+                "NumberOfQueue": 8,
+                "PerQueueSize": 8000,
+                "PtpQueueId": 6,
+                "StreamPriorityConfigIngressIndexMax": 10,
+                "TickGranularity": 8
+            },
+            "DeviceType": "EndStation",
+            "IPv4": {
+                "Gateway": "10.0.0.254",
+                "IpAddress": "10.0.0.11",
+                "SubnetMask": "255.255.255.0"
+            },
+            "Id": 11,
+            "Interfaces": [
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 11,
+                    "InterfaceId": 1,
+                    "InterfaceName": "1",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                },
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 11,
+                    "InterfaceId": 2,
+                    "InterfaceName": "2",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                }
+            ],
+            "NetconfConfiguration": {
+                "NetconfOverSSH": {
+                    "Account": "admin",
+                    "Password": "moxa",
+                    "SSHPort": 830
+                },
+                "NetconfOverTLS": {
+                    "CaCerts": "",
+                    "CertFile": "",
+                    "KeyFile": "",
+                    "TLSPort": 6513
+                },
+                "TLS": false
+            },
+            "SnmpConfiguration": {
+                "Port": 161,
+                "ReadCommunity": "public",
+                "Version": "v2c",
+                "WriteCommunity": "private"
+            },
+            "Zone": 0
+        },
+        {
+            "Angle": 0,
+            "Coordinate": {
+                "X": 0,
+                "Y": 0
+            },
+            "DeviceName": "End Station 2",
+            "DeviceProperty": {
+                "DeviceProfileId": 12,
+                "GCLOffsetMaxDuration": 1000000,
+                "GCLOffsetMinDuration": 680,
+                "GateControlListLength": 1024,
+                "MaxVlanCfgSize": 256,
+                "ModelName": "EndStation",
+                "FirmwareVersion": "v2.2",
+                "NumberOfQueue": 8,
+                "PerQueueSize": 8000,
+                "PtpQueueId": 6,
+                "StreamPriorityConfigIngressIndexMax": 10,
+                "TickGranularity": 8
+            },
+            "DeviceType": "EndStation",
+            "IPv4": {
+                "Gateway": "10.0.0.254",
+                "IpAddress": "10.0.0.12",
+                "SubnetMask": "255.255.255.0"
+            },
+            "Id": 12,
+            "Interfaces": [
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 12,
+                    "InterfaceId": 1,
+                    "InterfaceName": "1",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                },
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 12,
+                    "InterfaceId": 2,
+                    "InterfaceName": "2",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                }
+            ],
+            "NetconfConfiguration": {
+                "NetconfOverSSH": {
+                    "Account": "admin",
+                    "Password": "moxa",
+                    "SSHPort": 830
+                },
+                "NetconfOverTLS": {
+                    "CaCerts": "",
+                    "CertFile": "",
+                    "KeyFile": "",
+                    "TLSPort": 6513
+                },
+                "TLS": false
+            },
+            "SnmpConfiguration": {
+                "Port": 161,
+                "ReadCommunity": "public",
+                "Version": "v2c",
+                "WriteCommunity": "private"
+            },
+            "Zone": 0
+        },
+        {
+            "Angle": 0,
+            "Coordinate": {
+                "X": 0,
+                "Y": 0
+            },
+            "DeviceName": "Switch 1",
+            "DeviceProperty": {
+                "DeviceProfileId": 1,
+                "GCLOffsetMaxDuration": 1000000,
+                "GCLOffsetMinDuration": 680,
+                "GateControlListLength": 1024,
+                "MaxVlanCfgSize": 256,
+                "ModelName": "TSN-G5008-2GTXSFP",
+                "FirmwareVersion": "v2.2",
+                "NumberOfQueue": 8,
+                "PerQueueSize": 8000,
+                "PtpQueueId": 6,
+                "StreamPriorityConfigIngressIndexMax": 10,
+                "TickGranularity": 8
+            },
+            "DeviceType": "TSNSwitch",
+            "IPv4": {
+                "Gateway": "10.0.0.254",
+                "IpAddress": "10.0.0.1",
+                "SubnetMask": "255.255.255.0"
+            },
+            "Id": 1,
+            "Interfaces": [
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 1,
+                    "InterfaceId": 1,
+                    "InterfaceName": "1",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                },
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 1,
+                    "InterfaceId": 2,
+                    "InterfaceName": "2",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                },
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 1,
+                    "InterfaceId": 3,
+                    "InterfaceName": "3",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                },
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 1,
+                    "InterfaceId": 4,
+                    "InterfaceName": "4",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                },
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 1,
+                    "InterfaceId": 5,
+                    "InterfaceName": "5",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                },
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 1,
+                    "InterfaceId": 6,
+                    "InterfaceName": "6",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                },
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 1,
+                    "InterfaceId": 7,
+                    "InterfaceName": "7",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                },
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 1,
+                    "InterfaceId": 8,
+                    "InterfaceName": "8",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                }
+            ],
+            "NetconfConfiguration": {
+                "NetconfOverSSH": {
+                    "Account": "admin",
+                    "Password": "moxa",
+                    "SSHPort": 830
+                },
+                "NetconfOverTLS": {
+                    "CaCerts": "",
+                    "CertFile": "",
+                    "KeyFile": "",
+                    "TLSPort": 6513
+                },
+                "TLS": false
+            },
+            "SnmpConfiguration": {
+                "Port": 161,
+                "ReadCommunity": "public",
+                "Version": "v2c",
+                "WriteCommunity": "private"
+            },
+            "Zone": 0
+        },
+        {
+            "Angle": 0,
+            "Coordinate": {
+                "X": 0,
+                "Y": 0
+            },
+            "DeviceName": "Switch 2",
+            "DeviceProperty": {
+                "DeviceProfileId": 1,
+                "GCLOffsetMaxDuration": 1000000,
+                "GCLOffsetMinDuration": 680,
+                "GateControlListLength": 1024,
+                "MaxVlanCfgSize": 256,
+                "ModelName": "TSN-G5008-2GTXSFP",
+                "FirmwareVersion": "v2.2",
+                "NumberOfQueue": 8,
+                "PerQueueSize": 8000,
+                "PtpQueueId": 6,
+                "StreamPriorityConfigIngressIndexMax": 10,
+                "TickGranularity": 8
+            },
+            "DeviceType": "TSNSwitch",
+            "IPv4": {
+                "Gateway": "10.0.0.254",
+                "IpAddress": "10.0.0.2",
+                "SubnetMask": "255.255.255.0"
+            },
+            "Id": 2,
+            "Interfaces": [
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 2,
+                    "InterfaceId": 1,
+                    "InterfaceName": "1",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                },
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 2,
+                    "InterfaceId": 2,
+                    "InterfaceName": "2",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                },
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 2,
+                    "InterfaceId": 3,
+                    "InterfaceName": "3",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                },
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 2,
+                    "InterfaceId": 4,
+                    "InterfaceName": "4",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                },
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 2,
+                    "InterfaceId": 5,
+                    "InterfaceName": "5",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                },
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 2,
+                    "InterfaceId": 6,
+                    "InterfaceName": "6",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                },
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 2,
+                    "InterfaceId": 7,
+                    "InterfaceName": "7",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                },
+                {
+                    "CableTypes": [
+                        "Copper",
+                        "Fiber"
+                    ],
+                    "DeviceId": 2,
+                    "InterfaceId": 8,
+                    "InterfaceName": "8",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [
+                        100,
+                        1000
+                    ],
+                    "Used": false
+                }
+            ],
+            "NetconfConfiguration": {
+                "NetconfOverSSH": {
+                    "Account": "admin",
+                    "Password": "moxa",
+                    "SSHPort": 830
+                },
+                "NetconfOverTLS": {
+                    "CaCerts": "",
+                    "CertFile": "",
+                    "KeyFile": "",
+                    "TLSPort": 6513
+                },
+                "TLS": false
+            },
+            "SnmpConfiguration": {
+                "Port": 161,
+                "ReadCommunity": "public",
+                "Version": "v2c",
+                "WriteCommunity": "private"
+            },
+            "Zone": 0
+        }
+    ],
+    "DirtyStreams": [],
+    "DisplayZone": false,
+    "GclResults": [],
+    "Id": 0,
+    "LastModifiedTime": 1649814735,
+    "Links": [
+        {
+            "BandwidthValue": 1000,
+            "CableLength": 5,
+            "CableType": "Copper",
+            "DestinationDeviceId": 1,
+            "DestinationInterfaceId": 1,
+            "Id": 1,
+            "PropagationDelay": 5,
+            "SourceDeviceId": 11,
+            "SourceInterfaceId": 1
+        },
+        {
+            "BandwidthValue": 1000,
+            "CableLength": 5,
+            "CableType": "Copper",
+            "DestinationDeviceId": 2,
+            "DestinationInterfaceId": 2,
+            "Id": 2,
+            "PropagationDelay": 5,
+            "SourceDeviceId": 1,
+            "SourceInterfaceId": 2
+        },
+        {
+            "BandwidthValue": 1000,
+            "CableLength": 5,
+            "CableType": "Copper",
+            "DestinationDeviceId": 12,
+            "DestinationInterfaceId": 1,
+            "Id": 3,
+            "PropagationDelay": 5,
+            "SourceDeviceId": 2,
+            "SourceInterfaceId": 1
+        }
+    ],
+    "PriorityCodePointToQueueMapping": {
+        "0": [
+            0
+        ],
+        "1": [
+            1
+        ],
+        "2": [
+            2
+        ],
+        "3": [
+            3
+        ],
+        "4": [
+            4
+        ],
+        "5": [
+            5
+        ],
+        "6": [
+            6
+        ],
+        "7": [
+            7
+        ]
+    },
+    "ProjectName": "Simple Class Based Project",
+    "RoutingResults": [],
+    "Streams": [
+        {
+            "CB": {
+                "Active": false,
+                "VlanId": 24178
+            },
+            "Id": 1,
+            "Listeners": [
+                {
+                    "EndStationInterface": {
+                        "CableTypes": [],
+                        "DeviceId": 12,
+                        "InterfaceId": 1,
+                        "InterfaceName": "",
+                        "IpAddress": "",
+                        "MacAddress": "",
+                        "SupportSpeeds": [],
+                        "Used": true
+                    },
+                    "InterfaceCapability": {
+                        "CbCapable": false,
+                        "CbSequenceTypeList": [],
+                        "CbStreamIdenTypeList": [],
+                    },
+                    "UserToNetworkRequirement": {
+                        "MaxLatency": 0,
+                        "NumSeamlessTrees": 0
+                    }
+                }
+            ],
+            "Multicast": false,
+            "QosType": "Bandwidth",
+            "StreamPriority": {
+                "Active": false,
+                "CCLinkIeTSN": {
+                    "EnableSubType": false,
+                    "EtherType": 0,
+                    "SubType": 0
+                },
+                "FrameType": "NA"
+            },
+            "StreamId": {
+                "MacAddress": "",
+                "UniqueId": 1
+            },
+            "StreamName": "Stream 1",
+            "StreamRank": 1,
+            "StreamTrafficType": "Cyclic",
+            "Talker": {
+                "DataFrameSpecifications": [
+                    {
+                        "Ieee802MacAddresses": {
+                            "DestinationMacAddress": "",
+                            "SourceMacAddress": ""
+                        },
+                        "Ieee802VlanTag": {
+                            "PriorityCodePoint": 7,
+                            "VlanId": 110
+                        },
+                        "Ipv4Tuple": {
+                            "DestinationIpAddress": "",
+                            "DestinationPort": 0,
+                            "Dscp": 0,
+                            "Protocol": 0,
+                            "SourceIpAddress": "",
+                            "SourcePort": 0
+                        },
+                        "Ipv6Tuple": {
+                            "DestinationIpAddress": "",
+                            "DestinationPort": 0,
+                            "Dscp": 0,
+                            "Protocol": 0,
+                            "SourceIpAddress": "",
+                            "SourcePort": 0
+                        },
+                        "Type": "Ieee802VlanTag"
+                    }
+                ],
+                "EndStationInterface": {
+                    "CableTypes": [],
+                    "DeviceId": 11,
+                    "InterfaceId": 1,
+                    "InterfaceName": "",
+                    "IpAddress": "",
+                    "MacAddress": "",
+                    "SupportSpeeds": [],
+                    "Used": true
+                },
+                "TrafficSpecification": {
+                    "Interval": {
+                        "Denominator": 1,
+                        "Numerator": 0
+                    },
+                    "MaxFrameSize": 9552,
+                    "MaxFramesPerInterval": 3015,
+                    "TimeAware": {
+                        "EarliestTransmitOffset": 0,
+                        "Jitter": 100,
+                        "LatestTransmitOffset": 0
+                    },
+                    "TransmissionSelection": 1
+                }
+            },
+            "TimeSlotIndex": 1,
+            "VlanId": 257
+        }
+    ],
+    "TrafficTypeToPriorityCodePointMapping": {
+        "BestEffort": [
+            1,
+            0
+        ],
+        "Cyclic": [
+            4,
+            7,
+            3,
+            2,
+            5
+        ],
+        "NA": [],
+        "TimeSync": [
+            6
+        ]
+    },
+    "VlanRange": {
+        "Max": 1100,
+        "Min": 2
+    }
+}

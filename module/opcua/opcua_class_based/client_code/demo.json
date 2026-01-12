@@ -1,0 +1,249 @@
+{
+  "DeviceProfiles": [],
+  "ProjectSetting": {
+    "ProjectName": "demo_project",
+    "ConnectionAccount": {
+      "UserName": "admin",
+      "Password": "moxa"
+    },
+    "BaseIpSetting": {
+      "IpAddress": "192.168.81.1",
+      "SubnetMask": "255.255.255.0",
+      "Gateway": "192.168.81.254",
+      "DNS1": "1.1.1.1",
+      "DNS2": "2.2.2.2"
+    },
+    "NETCONF": {
+      "SSHPort": 80
+    },
+    "SNMP": {
+      "ReadCommunity": "read",
+      "WriteCommunity": "write",
+      "Port": 5000,
+      "Version": "v2c"
+    },
+    "RESTful": {
+      "Port": 3000
+    }
+  },
+  "Bridges": [
+    {
+      "Alias": "5110",
+      "DeviceProfileName": "TSN-G5008-2GTXSFP",
+      "FirmwareVersion": "",
+      "IpSetting": {
+        "IpAddress": "192.168.81.2",
+        "SubnetMask": "255.255.255.0",
+        "Gateway": "192.168.81.254",
+        "DNS1": "1.1.1.1",
+        "DNS2": "2.2.2.2"
+      },
+      "ConnectionAccount": {
+        "UserName": "admin",
+        "Password": "moxa"
+      },
+      "DeviceConfig": {
+        "DeviceAccounts": [
+          {
+            "UserName": "tony",
+            "Password": "moxa",
+            "Authority": "Supervisor"
+          },
+          {
+            "UserName": "will",
+            "Password": "moxa",
+            "Authority": "Admin"
+          }
+        ],
+        "ManagementInterface": {
+          "HttpActive": false,
+          "HttpTcpPort": 80,
+          "HttpsActive": true,
+          "HttpsTcpPort": 4000,
+          "NumberOfHttpAndHttpsLoginSessions": 3,
+          "NumberOfTelnetAndSshLoginSessions": 4,
+          "SnmpActive": "Enabled",
+          "SnmpPort": 161,
+          "SnmpTransportProtocol": "TCP",
+          "SshActive": false,
+          "SshTcpPort": 1026,
+          "TelnetActive": false,
+          "TelnetTcpPort": 4002
+        },
+              "MulticastStaticForwardTable": [
+                {
+                  "VlanId": 3,
+                  "MacAddress": "01-00-5E-00-00-01",
+                  "EgressPorts": [
+                    3,
+                    6
+                  ],
+                  "ForbiddenEgressPorts": [
+                    2,
+                    4,
+                    5
+                  ]
+                }
+              ],
+                          "SpanningTree": {
+                            "Active": false,
+                            "BridgePriority": 32768,
+                            "Compatibility": "RSTP",
+                            "ForwardDelayTime": 15,
+                            "HelloTime": 2,
+                            "MaxAge": 20
+                          },      "TimeSync": {
+        "Active": false,
+        "Profile": "IEEE_802Dot1AS_2011",
+        "IeeeDot1AS2011": {
+          "Priority1": 2,
+          "Priority2": 4,
+          "AccuracyAlert": 50
+        }
+      },
+              "UnicastStaticForwardTable": [
+                {
+                  "VlanId": 3,
+                  "MacAddress": "00-11-22-33-44-55",
+                  "EgressPort": 2
+                }
+              ]      },
+      "EthernetInterfaces": [
+        {
+          "InterfaceId": 1,
+          "PerStreamPriorities": [
+            {
+              "EtherType": 34,
+              "SubType": 32,
+              "VlanId": 3,
+              "PriorityCodePoint": 6
+            }
+          ],
+          "SpanningTreePort": {
+            "Edge": "No",
+            "Priority": 128,
+            "PathCost": 6,
+            "LinkType": "PointToPoint",
+            "BPDUFilter": false
+          },
+          "TimeAwareShaper": [
+            {
+              "Index": 0,
+              "Interval": 400,
+              "Queue0": true,
+              "Queue1": true,
+              "Queue2": false,
+              "Queue3": false,
+              "Queue4": false,
+              "Queue5": false,
+              "Queue6": false,
+              "Queue7": false
+            },
+            {
+              "Index": 1,
+              "Interval": 80,
+              "Queue0": false,
+              "Queue1": false,
+              "Queue2": false,
+              "Queue3": false,
+              "Queue4": false,
+              "Queue5": false,
+              "Queue6": true,
+              "Queue7": false
+            },
+            {
+              "Index": 2,
+              "Interval": 20,
+              "Queue0": false,
+              "Queue1": false,
+              "Queue2": false,
+              "Queue3": false,
+              "Queue4": false,
+              "Queue5": false,
+              "Queue6": false,
+              "Queue7": true
+            }
+          ],
+          "TimeSyncPort": {
+            "Active": false,
+            "AnnounceInterval": 1,
+            "AnnounceReceiptTimeout": 2,
+            "NeighborPropagationDelayThreshold": 3,
+            "PdelayRequestInterval": 4,
+            "SyncInterval": 5,
+            "SyncReceiptTimeout": 6
+          }
+        }
+      ]
+    },
+    {
+      "IpSetting": {
+        "IpAddress": "192.168.81.3",
+        "SubnetMask": "255.255.255.0",
+        "Gateway": "192.168.81.254"
+      },
+      "Alias": "5004",
+      "DeviceProfileName": "TSN-G5004"
+    }
+  ],
+  "EndStations": [
+    {
+      "IpSetting": {
+        "IpAddress": "192.168.81.1",
+        "SubnetMask": "255.255.255.0",
+        "Gateway": "192.168.81.254"
+      },
+      "Alias": "End-Station",
+      "EthernetInterfaces": [
+        {
+          "InterfaceName": "e1"
+        },
+        {
+          "InterfaceName": "e2"
+        }
+      ]
+    },
+    {
+      "IpSetting": {
+        "IpAddress": "192.168.81.4",
+        "SubnetMask": "255.255.255.0",
+        "Gateway": "192.168.81.254"
+      },
+      "Alias": "End-Station",
+      "EthernetInterfaces": [
+        {
+          "InterfaceName": "e1"
+        },
+        {
+          "InterfaceName": "e2"
+        }
+      ]
+    }
+  ],
+  "Links": [
+    {
+      "SourceIpAddress": "192.168.81.1",
+      "SourceInterfaceName": "e1",
+      "DestinationIpAddress": "192.168.81.2",
+      "DestinationInterfaceName": "3"
+    },
+    {
+      "SourceIpAddress": "192.168.81.2",
+      "SourceInterfaceName": "1",
+      "DestinationIpAddress": "192.168.81.3",
+      "DestinationInterfaceName": "1"
+    },
+    {
+      "SourceIpAddress": "192.168.81.2",
+      "SourceInterfaceName": "2",
+      "DestinationIpAddress": "192.168.81.3",
+      "DestinationInterfaceName": "2"
+    },
+    {
+      "SourceIpAddress": "192.168.81.3",
+      "SourceInterfaceName": "3",
+      "DestinationIpAddress": "192.168.81.4",
+      "DestinationInterfaceName": "e1"
+    }
+  ]
+}
