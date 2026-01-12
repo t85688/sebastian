@@ -155,14 +155,14 @@ func (simple_projects *ActSimpleProjects) UnmarshalJSONData(data []byte) statusc
 type Project struct {
 	ProjectInfo
 
-	Devices         map[string]*Device `json:"Devices,omitempty"`
-	Links           map[string]*Link   `json:"Links,omitempty"`
-	ProjectSetting  ProjectSetting     `json:"ProjectSetting"`
-	TrafficDesign   TrafficDesign      `json:"TrafficDesign"`
-	ComputedResult  ComputedResult     `json:"ComputedResult"`
-	TopologySetting TopologySetting    `json:"TopologySetting"`
-	// DeviceConfig     DeviceConfig           `json:"DeviceConfig,omitempty"`
-	SkuQuantitiesMap map[string]*SkuQuantity `json:"SkuQuantitiesMap,omitempty"`
+	Devices          []Device               `json:"Devices"`
+	Links            []Link                 `json:"Links"`
+	ProjectSetting   ProjectSetting         `json:"ProjectSetting"`
+	TrafficDesign    TrafficDesign          `json:"TrafficDesign"`
+	ComputedResult   ComputedResult         `json:"ComputedResult"`
+	TopologySetting  TopologySetting        `json:"TopologySetting"`
+	DeviceConfig     DeviceConfig           `json:"DeviceConfig,omitempty"`
+	SkuQuantitiesMap map[string]SkuQuantity `json:"SkuQuantitiesMap,omitempty"`
 }
 
 func (project Project) String() string {

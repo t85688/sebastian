@@ -1,8 +1,8 @@
 package domain
 
 import (
-	"encoding/json"
 	"fmt"
+	"encoding/json"
 
 	"gitlab.com/moxa/sw/act/chamberlain-sebastian-golang/internal/sebastian/statuscode"
 )
@@ -107,7 +107,7 @@ func ParseStreamType(s string) (StreamTypeEnum, statuscode.Response) {
 type IntelligentVlan struct {
 	VlanId         uint16         `json:"VlanId"` // The unique id of the vlan
 	StreamType     StreamTypeEnum `json:"StreamType"`
-	EndStationList []string       `json:"EndStationList"` // The vlan id list
+	EndStationList []int64        `json:"EndStationList"` // The vlan id list
 }
 
 func (intelligentVlan IntelligentVlan) String() string {

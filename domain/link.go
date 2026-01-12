@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 
 	"gitlab.com/moxa/sw/act/chamberlain-sebastian-golang/internal/sebastian/statuscode"
-	"gitlab.com/moxa/sw/maf/moxa-app-framework/netdl"
 )
 
 type LinkInfo struct {
@@ -51,18 +50,17 @@ func (linkConf *LinkConf) CheckFeasibility() statuscode.Response {
 }
 
 type Link struct {
-	netdl.Link
-	PropagationDelay int `json:"PropagationDelay"`
-	// LinkInfo
+	LinkInfo
 
-	// Alive            bool   `json:"Alive"`
-	// CableLength      int    `json:"CableLength"`
-	// CableType        string `json:"CableType"`
-	// Redundant        bool   `json:"Redundant"`
-	// Speed            int    `json:"Speed"`
+	Alive            bool   `json:"Alive"`
+	CableLength      int    `json:"CableLength"`
+	CableType        string `json:"CableType"`
+	PropagationDelay int    `json:"PropagationDelay"`
+	Redundant        bool   `json:"Redundant"`
+	Speed            int    `json:"Speed"`
 }
 
-func (link *Link) String() string {
+func (link Link) String() string {
 	jsonBytes, _ := json.MarshalIndent(link, "", "  ")
 	return string(jsonBytes)
 }

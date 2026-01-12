@@ -5,7 +5,6 @@ import (
 	"fmt"
 
 	"gitlab.com/moxa/sw/act/chamberlain-sebastian-golang/internal/sebastian/statuscode"
-	"gitlab.com/moxa/sw/maf/moxa-app-framework/netdl"
 )
 
 type MountType int
@@ -324,37 +323,36 @@ func (deviceConf *DeviceConf) CheckFeasibility() statuscode.Response {
 }
 
 type Device struct {
-	netdl.Device
-	// DeviceInfo
+	DeviceInfo
 
-	// DeviceInterfaces map[int64]DeviceInterface `json:"DeviceInterfaces"`
+	DeviceInterfaces map[int64]DeviceInterface `json:"DeviceInterfaces"`
 
-	// Account                  Account              `json:"Account"`
-	// Coordinate               Coordinate           `json:"Coordinate"`
-	// DeviceAlias              string               `json:"DeviceAlias"`
-	// DeviceName               string               `json:"DeviceName"`
-	// DeviceProfileId          int64                `json:"DeviceProfileId"`
-	// DeviceProperty           DeviceProperty       `json:"DeviceProperty"`
-	// DeviceRole               string               `json:"DeviceRole"`
-	// DeviceStatus             DeviceStatus         `json:"DeviceStatus"`
-	// DeviceType               DeviceType           `json:"DeviceType"`
-	// Distance                 int                  `json:"Distance"`
-	// EnableSnmpSetting        bool                 `json:"EnableSnmpSetting"`
-	// FirmwareFeatureProfileId int                  `json:"FirmwareFeatureProfileId"`
-	// FirmwareVersion          string               `json:"FirmwareVersion"`
-	// Id                       int64                `json:"Id"`
-	// Interfaces               []Interface          `json:"Interfaces"`
-	// Ipv4                     Ipv4                 `json:"Ipv4"`
-	// MacAddress               string               `json:"MacAddress"`
-	// ModularConfiguration     ModularConfiguration `json:"ModularConfiguration"`
-	// NetconfConfiguration     NetconfConfiguration `json:"NetconfConfiguration"`
-	// RestfulConfiguration     RestfulConfiguration `json:"RestfulConfiguration"`
-	// SSHPort                  int                  `json:"SSHPort"`
-	// SnmpConfiguration        SnmpConfiguration    `json:"SnmpConfiguration"`
-	// Tier                     int                  `json:"Tier"`
+	Account                  Account              `json:"Account"`
+	Coordinate               Coordinate           `json:"Coordinate"`
+	DeviceAlias              string               `json:"DeviceAlias"`
+	DeviceName               string               `json:"DeviceName"`
+	DeviceProfileId          int64                `json:"DeviceProfileId"`
+	DeviceProperty           DeviceProperty       `json:"DeviceProperty"`
+	DeviceRole               string               `json:"DeviceRole"`
+	DeviceStatus             DeviceStatus         `json:"DeviceStatus"`
+	DeviceType               DeviceType           `json:"DeviceType"`
+	Distance                 int                  `json:"Distance"`
+	EnableSnmpSetting        bool                 `json:"EnableSnmpSetting"`
+	FirmwareFeatureProfileId int                  `json:"FirmwareFeatureProfileId"`
+	FirmwareVersion          string               `json:"FirmwareVersion"`
+	Id                       int64                `json:"Id"`
+	Interfaces               []Interface          `json:"Interfaces"`
+	Ipv4                     Ipv4                 `json:"Ipv4"`
+	MacAddress               string               `json:"MacAddress"`
+	ModularConfiguration     ModularConfiguration `json:"ModularConfiguration"`
+	NetconfConfiguration     NetconfConfiguration `json:"NetconfConfiguration"`
+	RestfulConfiguration     RestfulConfiguration `json:"RestfulConfiguration"`
+	SSHPort                  int                  `json:"SSHPort"`
+	SnmpConfiguration        SnmpConfiguration    `json:"SnmpConfiguration"`
+	Tier                     int                  `json:"Tier"`
 }
 
-func (device *Device) String() string {
+func (device Device) String() string {
 	jsonBytes, _ := json.MarshalIndent(device, "", "  ")
 	return string(jsonBytes)
 }
