@@ -1,0 +1,7 @@
+package wsv2
+
+import "gitlab.com/moxa/sw/maf/moxa-app-framework/runtime/logging"
+
+var (
+	logger = logging.NewWithField("source", "ws")
+)
