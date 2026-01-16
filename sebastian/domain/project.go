@@ -2,6 +2,7 @@ package domain
 
 import (
 	"encoding/json"
+	"sync"
 
 	"gitlab.com/moxa/sw/act/chamberlain-sebastian-golang/internal/sebastian/statuscode"
 )
@@ -153,6 +154,7 @@ func (simple_projects *ActSimpleProjects) UnmarshalJSONData(data []byte) statusc
 }
 
 type Project struct {
+	Mu sync.Mutex
 	ProjectInfo
 
 	Devices         map[string]*Device `json:"Devices,omitempty"`

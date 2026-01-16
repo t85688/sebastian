@@ -1,8 +1,8 @@
 package domain
 
 import (
-	"fmt"
 	"encoding/json"
+	"fmt"
 
 	"gitlab.com/moxa/sw/act/chamberlain-sebastian-golang/internal/sebastian/statuscode"
 )
@@ -88,6 +88,15 @@ func (e *StreamTypeEnum) UnmarshalJSON(b []byte) error {
 	}
 
 	return fmt.Errorf("invalid StreamType value")
+}
+
+func (s StreamTypeEnum) MarshalJSON() ([]byte, error) {
+	name, ok := StreamTypeEnumToString[s]
+	if !ok {
+		name = "Unknown"
+	}
+	// 注意：JSON 字串必須包含引號
+	return json.Marshal(name)
 }
 
 func (stream_type StreamTypeEnum) String() string {

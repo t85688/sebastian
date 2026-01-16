@@ -255,17 +255,18 @@ func (createDeviceRequest *CreateDeviceRequest) UnmarshalJSONData(data []byte) s
 }
 
 type DeviceConf struct {
-	ModelName            string               `json:"ModelName"`
-	DeviceName           *string              `json:"deviceName,omitempty" gorm:"column:device_name;type:varchar(255)"`
-	DeviceProfileId      int64                `json:"DeviceProfileId"`
-	IP                   string               `json:"ip" gorm:"column:ip;type:varchar(15)"`
-	MAC                  string               `json:"mac" gorm:"column:mac;type:varchar(12)"`
-	SubnetMask           *string              `json:"subnetMask,omitempty" gorm:"-"`
-	DefaultGateway       *string              `json:"defaultGateway,omitempty" gorm:"-"`
+	ModelName            string               `json:"ModelName,omitempty"`
+	DeviceAlias          string               `json:"DeviceAlias,omitempty"`
+	DeviceName           string               `json:"deviceName,omitempty" gorm:"column:device_name;type:varchar(255)"`
+	DeviceProfileId      int64                `json:"DeviceProfileId,omitempty"`
+	IP                   string               `json:"ip,omitempty" gorm:"column:ip;type:varchar(15)"`
+	MAC                  string               `json:"mac,omitempty" gorm:"column:mac;type:varchar(12)"`
+	SubnetMask           string               `json:"subnetMask,omitempty" gorm:"-"`
+	DefaultGateway       string               `json:"defaultGateway,omitempty" gorm:"-"`
 	DnsServers           []string             `json:"dnsServers,omitempty" gorm:"-"`
-	FirmwareVersion      string               `json:"firmwareVersion" gorm:"column:firmware_version;type:varchar(50)"`
+	FirmwareVersion      string               `json:"firmwareVersion,omitempty" gorm:"column:firmware_version;type:varchar(50)"`
 	Interfaces           []*netdl.Interface   `json:"interfaces,omitempty"`
-	ModularConfiguration ModularConfiguration `json:"ModularConfiguration"`
+	ModularConfiguration ModularConfiguration `json:"ModularConfiguration,omitempty"`
 }
 
 func (deviceConf DeviceConf) String() string {
@@ -282,17 +283,6 @@ func (deviceConf *DeviceConf) UnmarshalJSONData(data []byte) statuscode.Response
 }
 
 func (deviceConf *DeviceConf) CheckFeasibility() statuscode.Response {
-	if len(deviceConf.ModelName) < 1 || len(deviceConf.ModelName) > 64 {
-		return statuscode.StatusUnprocessableEntity(
-			statuscode.ErrorParamsData{
-				ErrorParams: map[string]any{
-					"modelName": deviceConf.ModelName,
-					"size":      len(deviceConf.ModelName),
-				},
-			},
-			"ModelName must be between 1 and 64 characters")
-	}
-	return statuscode.StatusOK(nil)
 }
 
 type Device struct {
